@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bilecik</title>
+</head>
+<body>
+
+<h1>{{ ticket.title }}</h1>
+
+<ul>
+    <li>id: {{ ticket.id }}</li>
+    <li>period: {{ ticket.year }}_{{ ticket.month }}</li>
+    <li>version: {{ ticket.version }}</li>
+    <li>Models:
+        <ul>
+        {% for model in ticket.model.all %}
+            <li>{{ model.name }}</li>
+        {% endfor %}
+        </ul>
+    </li>
+</ul>
+
+</body>
+</html>
